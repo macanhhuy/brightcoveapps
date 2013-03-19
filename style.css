@@ -111,6 +111,7 @@
     	position: absolute;
     	top:11px;
     	right: 5px;
+      display: none;
     }
     .nav-tabs{
     	border: none;
