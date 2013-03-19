@@ -10,8 +10,7 @@
 <title>BrightCove Video</title>
 <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-    
+<link href="style.css" rel="stylesheet" type="text/css" />  
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
@@ -19,22 +18,65 @@
 <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
 
 
+<style>
 
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('span.select-file').click(function(){
+  $('#uploadform input[type=file]').click();
+});
+
+$('#uploadform input[type=file]').change(function() {
+  console.log($(this).val());
+   $('input.file-name').val($(this).val());
+});
+
+});
+
+
+</script>
 </head>
 <body>
 
-  <style>
-
-  </style>
+ 
   <div id="container" style="width:560px;height:560px;padding: 25px; margin:0 auto;">
-      <div id="logo">
-        <img src="bclogo.png" />
-      </div>
-      <div class="video-button">
-        <h2>PLACE VIDEO IN JIVE</h2>
-        <span class="button insert-video"><span>Select Video</span><span></span></span>
-      <span class="button upload-video"><span>Upload Video</span><span></span></span>
-      </div>
+    <div id="search" style="width:560px;height:30px;">
+    	<h3>UPLOAD VIDEO</h3>
+    
+    </div>
+  
+    
+    <div id="uploadform" style="width:560px;height: 372px;">
+      <form>
+        <div class="row1">
+          <label>video to upload</label>
+          <input type="text" class="file-name" name="file-name"/>
+          <input type="file" name="video-file" />
+          <span class="select-file"></span>
+          
+        </div>
+        <div class="row2">
+          <label>name <span class="required">(required)</span></label>
+          <input name="video-name" />
+        </div>
+        <div class="row3">
+          <label>description</label>
+          <textarea cols="20" rows="20"></textarea>
+        </div>
+        <div class="row4">
+          <label>tags  (separate tags with spaces)</label>
+          <input name="video-tag" />
+        </div>
+      </form>
+     
+      <div class="button-group">
+    	<span class="button insert-video"><span>Start Upload</span><span></span></span>
+    	<span class="button insert-cancel"><span>Cancel</span><span></span></span>
+   		 </div>
+    </div>
+
+
   </div>
 
 <script>

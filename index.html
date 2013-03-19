@@ -10,306 +10,19 @@
 <title>BrightCove Video</title>
 <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-  
+<link href="style.css" rel="stylesheet" type="text/css" />  
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
 <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>  
 <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
-
-
-<style id="jsbin-css">
-img{
-  max-width: 120px;
-}
-.pl:hover{
-  cursor: pointer;
-}
-</style>
+<script type="text/javascript" src="cufon-yui.js"></script>
+<script type="text/javascript"  src="Gotham.font.js"></script>
+<script type="text/javascript" src="functions.js"></script>
 </head>
 <body>
 
-  <style>
-   @font-face {
-				font-family: 'GothamBold';
-				src: url('https://github.com/macanhhuy/files/raw/master/gotham_bold.eot');
-				src: url('https://github.com/macanhhuy/files/raw/master/gothambold.eot?#iefix') format('embedded-opentype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothambold.woff') format('woff'),
-						 url('https://github.com/macanhhuy/files/raw/master/gotham_bold.ttf') format('truetype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothambold.svg#gothambold') format('svg');
-				font-weight: normal;
-				font-style: normal;
-		}
-
-   @font-face {
-				font-family: 'GothamBook';
-				src: url('https://github.com/macanhhuy/files/raw/master/gothambook.eot');
-				src: url('https://github.com/macanhhuy/files/raw/master/gothambook.eot?#iefix') format('embedded-opentype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothambook.woff') format('woff'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothambook.ttf') format('truetype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothambook.svg#gothambook') format('svg');
-				font-weight: normal;
-				font-style: normal;
-		}
-    
-    @font-face {
-				font-family: 'GothamLight';
-				src: url('https://github.com/macanhhuy/files/raw/master/gothamlight.eot');
-				src: url('https://github.com/macanhhuy/files/raw/master/gothamlight.eot?#iefix') format('embedded-opentype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothamlight.woff') format('woff'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothamlight.ttf') format('truetype'),
-						 url('https://github.com/macanhhuy/files/raw/master/gothamlight.svg#gothamlight') format('svg');
-				font-weight: normal;
-				font-style: normal;
-		}
-     html,body{
-      font-family: 'GothamBold', Arial;
-    }
-    #container{
-    	background: #3b3b3b url(bcbg.png) left bottom no-repeat;
-    }
-    #search h3{
-    	float: left;
-		margin: 0;
-		color: white;
-		font-size: 18px;
-		font-family: 'GothamBold', Arial;
-    }
-    .searchform{
-    	  width:286px;
-    	  height: 30px;
-    	  background: #555555;
-    	  border-radius: 4px;
-    	  position: relative;
-    	  float: right;
-    }
-   .searchform input{
-   		width: 257px;
-		background: #555555;
-		border: none;
-		line-height: 27px;
-		height: 30px;
-		padding-left: 30px;
-		color: #fff;
-		font-size: 16px;
-		font-family: 'GothamLight', Arial;
-		border-radius: 4px;
-   }
-    span.search-icon{
-    	width: 16px;
-    	height: 17px;
-    	background: url(search-icon.png);
-    	display: inline-block;
-    	position: absolute;
-    	top:8px;
-    	left: 5px;
-    }
-    span.search-delete{
-    	width: 13px;
-    	height: 13px;
-    	background: url(seach-delete.png);
-    	display: inline-block;
-    	position: absolute;
-    	top:11px;
-    	right: 5px;
-    }
-    .nav-tabs{
-    	border: none;
-    }
-    .nav-tabs > li > a, .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-		color: #777777;
-		cursor: default;
-		
-		background: #494949;
-		font-size: 16px;
-		border: none;
-		border-radius: 4px;
-		font-weight: normal;
-		font-family: 'GothamBook', Arial;
-
-	}
-	.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus, .nav-tabs > li > a:hover{
-		background-color: #a6642a;
-		color: white;
-	}
-	li{
-		position: relative;
-	}
-	li.active > span, li:hover > span {
-		width: 32px;
-		height: 14px;
-		background: url(tab-active.png) no-repeat;
-		display: block;
-		position: absolute;
-		left: 50%;
-		margin-left: -16px;
-	}
-    th{
-      height: 21px;
-      line-height: 21px;
-      background: url(tbheader.png);
-      border-bottom: 2px solid #353535;
-      border-right: 2px solid #424242;
-    }
-    th.active, th:hover{
-      background: url(tbheader-active.png);
-      
-    }
-    th:last-child{
-    	border-right: none;
-    }
-    .video-name, .col1{
-      width: 327px;
-    }
-    .video-date, .col2{
-      width: 88px;
-    }
-    .video-owner, .col3{
-      width: 100px;
-    }
-    .video-star, .col4{
-      width: 30px;
-    }
-    tr.video-item{
-      height: 64px;
-      color: #999;
-      font-size: 12px;
-      font-family: 'GothamBook', Arial;
-    }
-    .video-item.active, .video-item:hover{
-    	background: #64503f;
-    }
-    tbody tr > td > div{
-      height: 64px;
-      position: relative;
-     
-   
-    vertical-align: middle;
-    }
-    div.col3{
-    	 display: table-cell;
-    }
-    .video-title{
-      color: #999;
-      font-size: 12px;
-      width:208px;
-      float:left;
-      display:inline;
-      padding-left:10px;
-      line-height: 110%;
-      
-    }
-    .video-title > h5{
-      margin: 0;
-      color: white;
-      font-size: 14px;
-      font-weight: normal;
-      font-family: 'GothamBold', Arial;
-    }
-    div.col2, div.col3{
-     
-      font-weight:bold;
-      text-align: center;
-     
-    }
-    div.col2{
-       line-height: 64px;
-    }
-    span.head-star{
-    	height: 11px;
-    	width: 11px;
-    	background: url(star.png);
-    	display: block;
-		text-align: center;
-		margin: 0 auto;
-
-    }
-    .star{
-    	line-height: 64px;
-    	height: 14px;
-    	width: 15px;
-    	background: url(hover-star.png);
-    	display: block;
-    	margin: auto;
-    	top: 50%;
-		position: absolute;
-		left: 50%;
-		margin-left: -7px;
-		margin-top: -8px;
-    }
-     .star.active, .star:hover{
-    	
-    	background: url(active-star.png);
-    }
-    #container, #search, #tabs, #videos table{
-    	width: 560px;
-
-    }
-    .button-group{
-    	margin-top: 50px;
-    }
-    .button{
-    	width: 264px;
-		height: 41px;
-		display: block;
-		float: left;
-		line-height: 38px;
-		text-align: center;
-		color: white;
-		font-size: 20px;
-		font-weight: normal;
-		font-family: 'GothamBook', Arial;
-
-    }
-    .button:hover, .star:hover, th:hover,  span.search-delete:hover{
-    	cursor: pointer;
-    }
-    .button.disable{
-    	color: #aaaaaa;
-    }
-     .button.disable > span{
-    	background-image: url(btn-disable.png);
-    }
-     .button.disable > span + span{
-  		background-image: url(btn-disable.png);
-    }
-       .button.active > span{
-    	background-image: url(btn-active.png);
-    }
-     .button.active > span + span{
-  		background-image: url(btn-active.png);
-    }
-    .button:hover > span{
-    	background-image: url(btn-hover.png);
-    }
-     .button:hover > span + span{
-  		background-image: url(btn-hover.png);
-    }
-    .button > span{
-    	width: 216px;
-		height: 41px;
-		padding-left: 24px;
-		display: block;
-		float: left;
-		background: url(btn.png) top left no-repeat;
-	
-    }
-    .button > span + span{
-    	width: 24px;
-		height: 41px;
-		padding-left: 0;
-		display: inline-block;
-		float: right;
-		background: url(btn.png) top right no-repeat;
-    }
-    .insert-video{
-    	margin-right: 17px;
-		margin-left: 7px;
-    }
-    .tab-content {
-	overflow: hidden;
-	}
-  </style>
+ 
   <div id="container" style="width:560px;height:560px;padding: 25px; margin:0 auto;">
     <div id="search" style="width:560px;height:30px;">
     	<h3>SELECT VIDEO</h3>
@@ -323,6 +36,7 @@ img{
   <li><a href="#myvideotab" data-toggle="tab">My Videos</a><span></span></li>
     <li><a href="#favoritetab" data-toggle="tab">Favorites</a><span></span></li>
 </ul>
+<div class="total-video">123 videos</div>
     </div>
     <div class="tab-content">
     <div id="allvideotab" class="tab-pane active" style="width:560px;height: 372px;background: #424242">
@@ -796,6 +510,6 @@ app.configs = {
 
 		Backbone.history.start();
 </script>
-
+<script type="text/javascript"> Cufon.now(); </script>
 </body>
 </html>

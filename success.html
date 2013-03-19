@@ -17,8 +17,11 @@
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
 <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>  
 <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="cufon-yui.js"></script>
+<script type="text/javascript"  src="Gotham.font.js"></script>
+<script type="text/javascript"  src="GothamBook_400.font.js"></script>
 
-
+<script type="text/javascript" src="functions.js"></script>
 
 </head>
 <body>
@@ -27,13 +30,17 @@
 
   </style>
   <div id="container" style="width:560px;height:560px;padding: 25px; margin:0 auto;">
-      <div id="logo">
-        <img src="bclogo.png" />
+      <div id="logo" style="width:320px; text-align:center;margin:60px auto;">
+        <img src="bclogo.png" style="height:58px"/>
       </div>
-      <div class="video-button">
-        <h2>PLACE VIDEO IN JIVE</h2>
-        <span class="button insert-video"><span>Select Video</span><span></span></span>
-      <span class="button upload-video"><span>Upload Video</span><span></span></span>
+  
+      <div class="success">
+        <h1>SUCCESS!</h1>
+       
+        <p style="font-smooth:always;">Your video has been uploaded to Brightcove Video Cloud, where it is being converted. This process can take some time, so please be patient. A placeholder will be displayed in Jive until the video is ready to be viewed.</p>
+      </div>
+      <div>
+      	<span class="button"><span>Close</span><span></span></span>
       </div>
   </div>
 
