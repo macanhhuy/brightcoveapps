@@ -127,6 +127,9 @@
 		font-family: 'GothamBook', Arial;
 
 	}
+  li a:hover{
+    cursor: pointer;
+  }
   .total-video{
     width: 100px;
     height: 25px;
@@ -471,11 +474,11 @@ margin-top: 74px;
   }
   .status p {
   position: absolute;
-  width: 260px;
+  width: 270px;
   height: 88px;
   top: 75px;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -155px;
   color: #ff4747;
   padding: 20px;
   font-family: 'GothamMedium';
